@@ -1,0 +1,57 @@
+// Compass
+//@import "compass";
+
+// Modules
+@import "modules/all";
+
+// Variables
+$base-font-family: Georgia, Times, "Times New Roman", serif;
+$base-font-size: 100%;
+$base-font-weight: normal;
+
+$heading-primary: 'montserratbold', Gotham, “Helvetica Neue”, Helvetica, Arial, sans-serif;
+$heading-secondary: 'OpenSansLight', Helvetica, Arial, sans-serif;
+$heading-tertiary: 'PacificoRegular', 'OpenSansLight', Helvetica, Arial, sans-serif;
+
+$color-main: $color-grey40;
+$color-darker: $color-grey60;
+$color-lighter: $color-grey20;
+
+$color-headings: $color-darker;
+$color-links: #7b99ac;
+$color-linksdark: #0c4e7f;
+$color-accent: $color-grey80;
+
+$base-font-color: $color-main;
+$base-line-height: 1.5;
+
+$base-background: $color-grey25;
+
+$base-unit-em: 2.5em;
+$base-unit-percent: 3%;
+$base-unit-px: 25px;
+$base-unit-px-sm: 15px;
+
+
+/* PARTIALS
+=====================================
+    #RESET
+	#HTML5
+	#CLEARFIX
+	#TYPOGRAPHY
+===================================== */
+
+// Partials - Global
+@import "partials/reset";
+@import "partials/html5";
+@import "partials/clearfix";
+@import "partials/typography";
+@import "partials/media";
+@import "partials/buttons";
+
+// Partials - Design
+
+// Partials - UI
+
+// Partials - Layout
+@import "partials/layout/grid-custom-percentage";

@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chris Gargiulo - NMA</title>
+
+<!-- HTML5 -->
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- VIEWPORT FOR MOBILE -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- MAIN CSS -->
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<header> 
+    <div class="container">
+        <h1>Chris Gargiulo</h1>   
+        <p>Designer &amp; Teacher</p>  
+	</div><!-- END CONTAINER -->
+</header>
+
+<div id="top">
+    <nav id="utilitynav" class="group">
+        <div class="container">
+            <ul class="nav">
+                <li id="cghome"><a href="index.html">Chris Gargiulo</a></li>
+                <li id="cgmenu"><a class="border-menu" href="#top"><span>Menu</span></a></li>
+            </ul>
+        </div><!-- END CONTAINER -->
+    </nav>
+    <nav id="utilitymenu" class="group">
+        <div class="container">
+            <ul class="nav right">
+                <li><a href="work.html"><!--<i class="icon-briefcase"></i> -->Work</a></li>
+                <!--<li><a href="#teaching">Teaching</a></li>-->
+                <li><a href="about.html"><!--<i class="icon-user"></i> -->About</a></li>
+            </ul>
+        </div><!-- END CONTAINER -->
+    </nav>
+</div>
+    
+<section class="full white companyname1">
+    <div class="container">
+    
+    	<div class="row">
+            <div class="one-whole column">
+				  <img src="images/nma2-hero-1200x600-home1.jpg" alt="NMA" class="scale-with-grid" />
+            </div>
+        </div>
+    
+    	<div class="row">
+            <div class="two-thirds column centered">
+                <h1>New <em>Media</em> Arts</h1>
+                <h2>Web Site</h2>
+                <p>The New Media Arts program web site for aspiring interface design and animation students.</p>
+            </div>
+        </div>
+    </div><!-- END CONTAINER -->
+</section>
+    
+<section class="full grey-fifteen"> 
+    <div class="container">
+    
+    	<div class="row">
+            <div class="one-whole column">   
+                <img src="images/nma-home-browser-vector.jpg" alt="NMA" class="scale-with-grid" />           
+            </div>
+        </div>
+          
+    </div>
+</section>
+    
+<section class="full grey-ten"> 
+    <div class="container">
+    
+    	<div class="row">
+            <div class="one-whole column">       
+                <img src="images/nma2-cinema-1200x900-home2.jpg" alt="NMA" class="scale-with-grid last" />
+            </div>
+        </div>
+          
+    </div>
+</section>
+    
+<section class="full white"> 
+    <div class="container">
+    
+        <div class="row group">
+            <div class="one-half column split">
+                <img src="images/nma2-browser-1200x1200-home4.jpg" alt="NMA" class="scale-with-grid" />
+            </div>
+            <div class="one-half column split">
+                <img src="images/nma2-browser-1200x1200-sub2.jpg" alt="NMA" class="scale-with-grid" />
+            </div>
+        </div><!-- END ROW GROUP -->
+          
+    </div>
+</section>
+    
+<section class="full grey-fifteen">
+    <div class="container">
+    
+        <div class="row">
+            <div class="one-whole column">       
+                <img src="images/nma2-ipad-1200x1200-sub1.jpg" alt="NMA" class="scale-with-grid last" />
+            </div>
+        </div>
+    
+    </div><!-- END CONTAINER -->
+</section>
+    
+<section class="full white">
+    <div class="container">
+    
+        <div class="row">
+            <div class="one-whole column">       
+                <img src="images/nma2-laptop-1200x900-home3.jpg" alt="NMA" class="scale-with-grid last" />
+            </div>
+        </div>
+    
+    </div><!-- END CONTAINER -->
+</section>
+    
+<div class="content group">
+<div class="container">
+         
+    <div class="thumbgrid solo"> 
+
+    </div><!--  END THUMBGRID -->
+   
+
+</div><!-- END CONTAINER -->
+</div><!-- END CONTENT -->
+    
+<div id="bottom">    
+    <nav id="footernav">
+        <div class="container">
+            <ul class="nav icons">
+                <li><a href="index.html"><!--<i class="icon-home"></i> -->Home</a></li>
+                <li><a href="work.html"><!--<i class="icon-briefcase"></i> -->Work</a></li>
+                <li><a href="about.html"><!--<i class="icon-user"></i> -->About</a></li>
+            </ul>
+        </div><!-- END CONTAINER -->
+    </nav> 
+</div>
+<footer>
+    <div class="container">
+            <div class="row">
+                <div class="one-whole column">
+                    <p class="copyright">&copy; <a href="index.html">Chris Gargiulo</a></p>
+                </div><!-- END COLUMN -->
+            </div><!-- END ROW GROUP -->
+    </div><!-- END CONTAINER -->
+</footer>
+    
+<!-- JS -->
+<script type="text/javascript" src="js/jquery.js"></script>		
+<script type="text/javascript" src="js/jquery.easing.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		// JQUERY ANIMATE TO ANCHOR WITH EASING
+		$('ul.nav a, a.bnav').bind('click',function(event){
+			var $anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top -36
+			}, 1500,'easeInOutExpo');
+			event.preventDefault();
+		});
+        
+        // JQUERY NAV TOGGLE 
+		$('#cgmenu a').click(function(){
+			$('#utilitymenu ul').slideToggle(function(){
+				if ($(this).css('display') == 'none') {
+					$(this).removeClass('show').addClass('hide').removeAttr('style')
+				} else if ($(this).css('display') == 'block') {
+					$(this).removeClass('hide').addClass('show').removeAttr('style');
+				}
+			});
+		})
+        
+        // LOAD WORK THUMBGRID CONTENT
+        $('.thumbgrid').load('index.html #work');
+		
+	});
+</script>
+
+</body>
+</html>

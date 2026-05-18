@@ -1,0 +1,1443 @@
+/* BASE (Initital Setup)
+=====================================
+	#BASE (variables)
+===================================== */
+// Base Modules and Variables
+@import "base";
+
+
+/* SITE SPECIFIC (Custom CSS for The Client Site)
+=====================================
+	#SITE-SPECIFIC GENERAL STYLING
+	#SITE-SPECIFIC TYPOGRAPHY
+	#LAYOUT/GRID
+	#SECTIONS
+	#MEDIA QUERIES
+	#@FONT-FACE
+===================================== */
+
+/* #SITE-SPECIFIC GENERAL STYLING
+===================================== */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+body {
+    background-color: $base-background;
+}
+
+img {
+    vertical-align: middle;
+    margin: 0 0 $base-unit-px 0;
+}
+
+img.last {
+    margin: 0;
+}
+
+strong {
+    font-weight: inherit;
+    color: $color-darker;
+}
+
+
+/* #LAYOUT/GRID
+===================================== */
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.content .container,
+.fcontent .container {
+    width: 1150px;
+    padding: $base-unit-px;
+}
+
+.row {
+    margin: 0;
+}
+
+/* #SITE SPECIFIC TYPOGRAPHY
+===================================== */
+
+h1 {
+    font-family: $heading-primary;
+    margin-top: 0;
+    margin-bottom: .2em;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+    color: $color-headings;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-secondary;
+    font-weight: normal;
+    font-style: normal;
+    color: $color-headings;
+    margin-top: 0;
+}
+
+p {
+    text-wrap: pretty
+}
+
+.jumbo {
+    font-size: 1.25em;
+    margin-top: 1.5em;
+    text-align: left;
+}
+
+/* #SECTIONS
+===================================== */
+
+header {
+    //height: 0px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1em;
+    line-height: 2.6em;
+    text-indent: -9000px;
+    height: 0px;
+    overflow: hidden;
+    text-align: right;
+    padding-left: 4em;
+    padding-right: 1.5em;
+}
+
+header h1 a,
+header h1 a:hover {
+    color: #fff;
+}
+
+header p {
+    text-indent: -9000px;
+    height: 0px;
+    line-height: 0px;
+    //border: 1px solid red;
+    margin: 0;
+}
+
+#top #utilitynav {
+    background: $color-grey25;
+    padding: 0;
+    height: 40px;
+}
+
+#top #utilitynav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#top #utilitynav ul li {
+    margin: 0;
+    padding: 0;
+    clear: none;
+    float: left;
+    text-align: center;
+    font-family: $heading-primary;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: .2em;
+    font-size: 8px;
+    line-height: 10px;
+    list-style: none;
+    display: block;
+}
+
+#top #utilitynav ul li#cghome a {
+    display: block;
+    height: 0;
+    width: 50px;
+    padding: 40px 0 0 0;
+    margin: 0 0 0 10px;
+    background-image: url(../images/chrisgargiulo-logo-topnavbar.gif);
+    background-repeat: no-repeat;
+    background-size: 50px 80px;
+    background-position: 0 0;
+    overflow: hidden;
+    font-size: 1.5em;
+    line-height: 1em;
+}
+
+#top #utilitynav ul li#cghome a:hover {
+    background-position: 0 -40px;
+    height: 25px;
+    padding: 15px 0 0 50px;
+    width: auto;
+    color: $color-grey65;
+}
+
+#top #utilitynav ul li#cgmenu {
+    float: right;
+}
+
+#top #utilitynav ul li#cgmenu a {
+    /*display: none;
+    height: 0px;
+    width: 40px;
+    padding: 40px 0 0 0;
+    background-image: url(../images/chrisgargiulo-menu-topnavbar.gif);
+    background-repeat: no-repeat;
+    background-size: 40px 80px;
+    background-position: 0 0;
+    overflow: hidden;*/
+    display: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1em;
+    padding: 2.5em 4em;
+    text-align: right;
+    float: right;
+    //background: yellow;
+
+    span {
+        display: none;
+    }
+
+}
+
+#top #utilitynav ul li#cgmenu a:hover,
+#top #utilitynav ul li#cgmenu a:visited,
+#top #utilitynav ul li#cgmenu a:focus {
+    background: none;
+    //background-position: 0 -40px;
+}
+
+#top #utilitynav ul li#cgmenu a.border-menu {
+    position: relative;
+    padding-left: 1.25em;
+}
+
+#top #utilitynav ul li#cgmenu a.border-menu:before {
+    font-size: 3em;
+    content: "";
+    position: absolute;
+    top: .6em;
+    right: .5em;
+    width: .75em;
+    height: 0.11em;
+    border-top: 0.325em double #fff;
+    border-bottom: 0.11em solid #fff;
+}
+
+#top #utilitymenu {
+    background: $color-grey15;
+}
+
+#top #utilitymenu ul.nav {
+    margin: 0;
+    padding: 0 10px;
+}
+
+#top #utilitymenu ul.right {
+    clear: none;
+    float: right;
+}
+
+
+#top #utilitymenu ul.right li {
+    margin: 0 0 0 2em;
+}
+
+#top #utilitymenu ul li {
+    clear: none;
+    float: left;
+    text-align: center;
+    font-family: $heading-primary;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: .2em;
+    font-size: 9px;
+    line-height: 10px;
+    list-style: none;
+}
+
+#top #utilitymenu ul li a {
+    color: $color-grey40;
+    display: block;
+    padding: 15px;
+}
+
+#top #utilitymenu ul li a:hover {
+    color: $color-linksdark;
+}
+
+#top #utilitymenu ul li a:hover {
+    color: $color-linksdark;
+}
+
+#top #utilitymenu ul li a i {
+    color: $color-grey40;
+    font-size: 11px;
+}
+
+#top #utilitymenu ul li a:hover i {
+    color: $color-linksdark;
+}
+
+.content {
+    background: $color-grey10;
+}
+
+.paper {
+    background-color: $color-white;
+    margin: 0;
+    padding: $base-unit-px;
+    clear: both;
+    /* box-shadow: h-shadow v-shadow blur spread color inset; 
+    -moz-box-shadow:    0px 0px 25px 0px $color-transblack5;
+    -webkit-box-shadow: 0px 0px 25px 0px $color-transblack5;
+    box-shadow:         0px 0px 25px 0px $color-transblack5;*/
+}
+
+#bottom #footernav {
+    background: $color-grey15;
+    text-align: center;
+    width: 100%;
+}
+
+
+#bottom #footernav ul {
+    margin: 0;
+}
+
+#bottom #footernav ul li {
+    clear: none;
+    display: inline-block;
+    margin: 0 .5em;
+    text-align: center;
+    font-family: $heading-primary;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: .2em;
+    font-size: 9px;
+    line-height: 10px;
+}
+
+#bottom #footernav ul.icons li a {
+    color: $color-grey40;
+    display: block;
+    padding: 15px;
+}
+
+#bottom #footernav ul.icons li a:hover {
+    color: $color-linksdark;
+}
+
+#bottom #footernav ul.icons li a i {
+    color: $color-grey40;
+    display: block;
+    font-size: 11px;
+}
+
+#bottom #footernav ul.icons li a:hover i {
+    color: $color-grey40;
+}
+
+footer {
+    //height: 40px;
+}
+
+footer .row {
+    margin: 0;
+}
+
+footer .copyright {
+    font-family: $heading-primary;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: .2em;
+    font-size: 9px;
+    line-height: 10px;
+    text-align: center;
+    padding: 15px 0;
+    color: $color-grey10;
+    margin-bottom: 0;
+}
+
+footer .copyright a {
+    color: $color-grey10;
+}
+
+/* HOME PAGE SPECIFIC */
+.poster-cg {
+    background: $color-white url(../images/chrisgargiulo-poster.gif) no-repeat center center;
+    background-size: 1000px 500px;
+    height: 500px;
+    //margin-bottom: $base-unit-px;
+    text-align: center;
+}
+
+.poster-cg img,
+.poster-cg h1,
+.poster-cg p {
+    display: none;
+}
+
+.poster-cg img {
+    display: none;
+    padding-top: 4.6em;
+    margin: 0 .8em 1em 0;
+}
+
+.poster-cg h1 {
+    font-size: 1.4em;
+    letter-spacing: .15em;
+    margin-bottom: .4em;
+}
+
+.poster-cg p {
+    font-family: $heading-primary;
+    font-size: .5em;
+    line-height: 1em;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.thumbgrid {
+    margin: $base-unit-px 0 0 0;
+}
+
+.thumbgrid.solo {
+    margin: 0;
+}
+
+//.thumbgrid.mid { margin: 0 0 $base-unit-px 0; }
+.thumbgrid.mid {
+    margin: 0;
+}
+
+.thumbgrid .column {
+    margin-bottom: 2%;
+}
+
+.thumbgrid .last .column {
+    margin-bottom: 0;
+}
+
+.th-umb {
+    display: block;
+    margin-bottom: 0;
+    color: $color-main;
+    text-align: center;
+}
+
+
+.th-umb img {
+    display: block;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+    /* Firefox 10+ */
+    filter: gray;
+    /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+    /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: all .6s ease;
+    /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden;
+    /* Fix for transition flickering */
+    margin: 0;
+}
+
+.th-umb img:hover {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0%);
+}
+
+.th-umb h3 {
+    font-family: $heading-primary;
+    text-transform: uppercase;
+    color: $color-main;
+    margin: 0;
+    font-size: .9em;
+    display: none;
+}
+
+.th-umb:hover h3 {
+    color: $color-linksdark;
+}
+
+.th-umb p {
+    font-family: $heading-secondary;
+    color: $color-main;
+    font-size: .65em;
+    margin: 0;
+    display: none;
+}
+
+.th-umb:hover p {
+    color: $color-links;
+}
+
+//#about.paper { margin-top: $base-unit-px; }
+
+#about {
+    background: url(../images/billboard-aiga-talk-2012-light.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#about .paper {
+    background: none;
+}
+
+.billboard {
+    text-align: center;
+    //background: url(../images/billboard-aiga-talk-2012.jpg) no-repeat center center;
+    min-height: 600px;
+    padding: 0 5%;
+    margin: 0;
+}
+
+.billboard i {
+    font-size: 3em;
+    display: block;
+}
+
+.billboard .textbox {
+    display: table;
+    height: 600px;
+    width: 100%;
+}
+
+.billboard .text {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.billboard h1 {
+    //font-size: 3em;
+    //line-height: 1em;
+    display: inline-block;
+    margin: .2em auto .2em auto;
+    padding: .2em;
+    //border-top: 5px solid;
+    //border-bottom: 5px solid;
+}
+
+.billboard h2 {
+    font-size: 1.3125em;
+    line-height: 1.25em;
+    padding: 0 15%;
+    margin-bottom: .85em;
+}
+
+.billboard p {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.billboard a.button i {
+    font-size: 1em;
+    display: inline;
+}
+
+.billboard.small {
+    min-height: 400px;
+}
+
+.billboard.small .textbox {
+    height: 400px;
+}
+
+.featuredbillboard {
+    position: relative;
+    text-align: center;
+    //padding: $base-unit-px $base-unit-px 0 $base-unit-px;
+    margin: $base-unit-px;
+}
+
+.featuredbillboard img {
+    //margin: $base-unit-px;
+}
+
+.featuredbillboard h1 {
+    font-size: 3em;
+    line-height: 1em;
+    display: inline-block;
+}
+
+.featuredbillboard em {
+    font-style: normal;
+}
+
+.featuredbillboard h2 {
+    font-size: 1.3125em;
+    line-height: 1.25em;
+    padding: 0 15%;
+}
+
+.featuredtextbox {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+}
+
+.textonly .featuredtextbox {
+    position: static;
+    top: auto;
+    width: auto;
+    padding: 15% 10% 0 10%;
+    //background: $color-grey30;
+    margin-bottom: 2%;
+}
+
+.textandimage .featuredtextbox {
+    position: static;
+    top: auto;
+    width: auto;
+    padding: 5% 10% 2% 10%;
+    //background: $color-grey30;
+    margin-bottom: 2%;
+}
+
+/* PROJECT-SPECIFIC STYLING */
+.urbangarden em {
+    color: #70aa54;
+}
+
+.featuredbillboard.recreate {
+    margin: 0;
+}
+
+.featuredbillboard.loremipsum {
+    padding: 5% 0 7% 0;
+}
+
+.recreate em {
+    color: #c00;
+}
+
+.harpercollins em {
+    color: #008746;
+}
+
+.companyname1 em {
+    color: #3279a1;
+    font-style: normal;
+}
+
+.gatemore em {
+    color: #0071bb;
+}
+
+.loremipsum em {
+    color: #000;
+}
+
+.nmagargiulo em {
+    color: #000;
+    font-style: normal;
+}
+
+/* FULL PAGE SPECIFIC */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.fpage {
+    display: table;
+    height: 80%;
+    width: 100%;
+    min-height: 80%;
+    /*for mozilla*/
+}
+
+.fcontainer {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5% 0;
+}
+
+.fleft {
+    text-align: left;
+}
+
+.full {
+    padding: $base-unit-px 0;
+    text-align: center;
+}
+
+.full .row {
+    margin: 0 $base-unit-px;
+}
+
+.full .split {
+    //margin-top: 2%;
+}
+
+
+
+.full-width-wrapper {
+    position: relative;
+    max-height: 95%;
+    //min-height: 720px;
+    overflow: hidden;
+    border-bottom: 1px solid $color-grey35;
+}
+
+.full-width-wrapper .featuredtextbox {
+    //margin-top: 10%;
+}
+
+.full-width-wrapper .featuredbillboard {
+    margin: 0;
+}
+
+img.full-width {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+img.full-width.max-height {
+    position: relative;
+    left: 0;
+    top: 50%;
+    margin-top: -25%;
+}
+
+.urbangarden img.full-width.max-height {
+    margin-top: -20%;
+}
+
+/* #Video
+================================================== */
+
+.videobox-outer {
+    display: table;
+    width: 100%;
+    height: 300px;
+
+}
+
+.videobox-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* #Colors
+================================================== */
+.dark a,
+.black a,
+.grey-dark a,
+.grey-middark a,
+.grey-mid a {
+    color: $color-grey80;
+}
+
+.dark,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark i {
+    color: $color-white;
+}
+
+/* GREY-LIGHT = #FFF */
+.white {
+    background-color: $color-white;
+}
+
+/* GREY-a7a7a7 = #FFF */
+.grey-a7a7a7 {
+    background-color: #a7a7a7;
+}
+
+/* GREY-LIGHT = #CCC */
+.grey-light {
+    background-color: $color-grey20;
+    color: $color-grey55;
+}
+
+.grey-light .sectionhead h1 {
+    border-color: $color-grey35;
+}
+
+.grey-light .sectionhead h2 {
+    color: $color-grey60;
+}
+
+.grey-light h1,
+.grey-light h2,
+.grey-light h3,
+.grey-light h4,
+.grey-light h5,
+.grey-light h6,
+.grey-light strong {
+    color: $color-grey70;
+}
+
+.grey-light blockquote {
+    color: $color-grey60;
+}
+
+.grey-light blockquote.quotes:before {
+    color: $color-grey25;
+}
+
+.grey-light blockquote.quotes:after {
+    color: $color-grey25;
+}
+
+.grey-light blockquote cite {
+    color: $color-grey40;
+}
+
+.grey-light blockquote.left {
+    border-right: 1px solid $color-grey20;
+}
+
+.grey-light blockquote.right {
+    border-left: 1px solid $color-grey20;
+}
+
+/* GREY-SUPERLIGHT = #F2F2F2 */
+.grey-superlight {
+    background-color: $color-grey5;
+    color: $color-grey50;
+}
+
+.grey-superlight .sectionhead h1 {
+    border-color: $color-grey35;
+}
+
+.grey-superlight .sectionhead h2 {
+    color: $color-grey60;
+}
+
+.grey-superlight h1,
+.grey-superlight h2,
+.grey-superlight h3,
+.grey-superlight h4,
+.grey-superlight h5,
+.grey-superlight strong {
+    color: $color-grey60;
+}
+
+.grey-superlight blockquote {
+    color: $color-grey60;
+}
+
+.grey-superlight blockquote.quotes:before {
+    color: $color-grey25;
+}
+
+.grey-superlight blockquote.quotes:after {
+    color: $color-grey25;
+}
+
+.grey-superlight blockquote cite {
+    color: $color-grey40;
+}
+
+.grey-superlight blockquote.left {
+    border-right: 1px solid $color-grey20;
+}
+
+.grey-superlight blockquote.right {
+    border-left: 1px solid $color-grey20;
+}
+
+/* GREY-TEN = #E5E5E5 */
+.grey-ten {
+    background-color: $color-grey10;
+    color: $color-grey50;
+}
+
+.grey-ten .sectionhead h1 {
+    border-color: $color-grey35;
+}
+
+.grey-ten .sectionhead h2 {
+    color: $color-grey60;
+}
+
+.grey-ten h1,
+.grey-ten h2,
+.grey-ten h3,
+.grey-ten h4,
+.grey-ten h5,
+.grey-ten strong {
+    color: $color-grey60;
+}
+
+.grey-ten blockquote {
+    color: $color-grey60;
+}
+
+.grey-ten blockquote.quotes:before {
+    color: $color-grey25;
+}
+
+.grey-ten blockquote.quotes:after {
+    color: $color-grey25;
+}
+
+.grey-ten blockquote cite {
+    color: $color-grey40;
+}
+
+.grey-ten blockquote.left {
+    border-right: 1px solid $color-grey20;
+}
+
+.grey-ten blockquote.right {
+    border-left: 1px solid $color-grey20;
+}
+
+/* GREY-TEN = #E5E5E5 */
+.grey-fifteen {
+    background-color: $color-grey15;
+    color: $color-grey50;
+}
+
+.grey-fifteen .sectionhead h1 {
+    border-color: $color-grey35;
+}
+
+.grey-fifteen .sectionhead h2 {
+    color: $color-grey60;
+}
+
+.grey-fifteen h1,
+.grey-fifteen h2,
+.grey-fifteen h3,
+.grey-fifteen h4,
+.grey-fifteen h5,
+.grey-fifteen strong {
+    color: $color-grey60;
+}
+
+.grey-fifteen blockquote {
+    color: $color-grey60;
+}
+
+.grey-fifteen blockquote.quotes:before {
+    color: $color-grey25;
+}
+
+.grey-fifteen blockquote.quotes:after {
+    color: $color-grey25;
+}
+
+.grey-fifteen blockquote cite {
+    color: $color-grey40;
+}
+
+.grey-fifteen blockquote.left {
+    border-right: 1px solid $color-grey20;
+}
+
+.grey-fifteen blockquote.right {
+    border-left: 1px solid $color-grey20;
+}
+
+/* #GRID
+================================================== */
+
+.grid {
+    margin: 1% 0;
+    padding: 0;
+}
+
+.grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.grid li {
+    position: relative;
+    height: 0;
+    float: left;
+    margin: 1%;
+    padding: 0;
+    overflow: hidden;
+    background: #fff;
+    text-align: center;
+    clear: none;
+}
+
+.grid .right {
+    float: right;
+}
+
+.grid img {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 75%;
+    /* you can scale images downward here or keep them at 100% */
+    max-height: 75%;
+    /* you can scale images downward here or keep them at 100% */
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+
+/* 12 col grid */
+.grid .w1 {
+    width: 6.3333%;
+}
+
+/* 98% - 11 gutters = 78% / 12 columns = 6.3333% */
+.grid .w2 {
+    width: 14.6666%;
+}
+
+/* (6.3333 * 2) + (1 * 2) = */
+.grid .w3 {
+    width: 23%;
+}
+
+/* (6.3333 * 3) + (2 * 2) = */
+.grid .w4 {
+    width: 31.3333%;
+}
+
+/* (6.3333 * 4) + (3 * 2) = */
+.grid .w5 {
+    width: 39.6666%;
+}
+
+/* (6.3333 * 5) + (4 * 2) = */
+.grid .w6 {
+    width: 48%;
+}
+
+/* (6.3333 * 6) + (5 * 2) = */
+.grid .w7 {
+    width: 56.3333%;
+}
+
+/* (6.3333 * 7) + (6 * 2) = */
+.grid .w8 {
+    width: 64.6666%;
+}
+
+/* (6.3333 * 8) + (7 * 2) = */
+.grid .w9 {
+    width: 73%;
+}
+
+/* (6.3333 * 9) + (8 * 2) = */
+.grid .w10 {
+    width: 81.3333%;
+}
+
+/* (6.3333 * 10) + (9 * 2) = */
+.grid .w11 {
+    width: 89.6666%;
+}
+
+/* (6.3333 * 11) + (10 * 2) = */
+.grid .w12 {
+    width: 98%;
+}
+
+.grid .h1 {
+    padding-top: 6.3333%;
+}
+
+/* 98% - 11 gutters = 78% / 12 columns = 6.3333% */
+.grid .h2 {
+    padding-top: 14.6666%;
+}
+
+/* (6.3333 * 2) + (1 * 2) = */
+.grid .h3 {
+    padding-top: 23%;
+}
+
+/* (6.3333 * 3) + (2 * 2) = */
+.grid .h4 {
+    padding-top: 31.3333%;
+}
+
+/* (6.3333 * 4) + (3 * 2) = */
+.grid .h5 {
+    padding-top: 39.6666%;
+}
+
+/* (6.3333 * 5) + (4 * 2) = */
+.grid .h6 {
+    padding-top: 48%;
+}
+
+/* (6.3333 * 6) + (5 * 2) = */
+.grid .h7 {
+    padding-top: 56.3333%;
+}
+
+/* (6.3333 * 7) + (6 * 2) = */
+.grid .h8 {
+    padding-top: 64.6666%;
+}
+
+/* (6.3333 * 8) + (7 * 2) = */
+.grid .h9 {
+    padding-top: 73%;
+}
+
+/* (6.3333 * 9) + (8 * 2) = */
+.grid .h10 {
+    padding-top: 81.3333%;
+}
+
+/* (6.3333 * 10) + (9 * 2) = */
+.grid .h11 {
+    padding-top: 89.6666%;
+}
+
+/* (6.3333 * 11) + (10 * 2) = */
+.grid .h12 {
+    padding-top: 98%;
+}
+
+/* #MEDIA QUERIES
+===================================== */
+
+
+/* Tablet (Between 768px - 1199px)*/
+@media all and (min-width: 47em) and (max-width: 74.9999em) {
+
+    body {
+        font-size: 93.75%;
+        /* 15px */
+    }
+
+    .container,
+    .content .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .fcontent .container {
+        width: 80%;
+        margin: 0;
+        padding: 10%;
+    }
+
+
+    .content {
+        padding: $base-unit-px;
+    }
+
+    .column,
+    .column:first-child {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .poster-cg {
+        //padding: 8em 0;
+        margin-bottom: 1%;
+    }
+
+
+    .thumbgrid {
+        margin: 1% 0 0 0;
+    }
+
+    .thumbgrid.solo {
+        margin: 0;
+    }
+
+    .thumbgrid.mid {
+        margin: 1% 0 1% 0;
+    }
+
+    .thumbgrid.mid .column {
+        margin-bottom: 2%;
+    }
+
+    .thumbgrid .last .column {
+        margin-bottom: 0;
+    }
+
+
+    .thumbgrid.solo .column,
+    .thumbgrid.solo .column:first-child {
+        margin-top: 0%;
+    }
+
+    #about.paper {
+        margin-top: 2%;
+    }
+
+    /*.full-width-wrapper {
+		position: relative;
+		min-height: inherit;
+		overflow: auto;
+        height: auto;
+	}
+    .full-width-wrapper .featuredbillboard {
+        margin: 0;
+    }
+	img.full-width.max-height {
+		position: static;
+		top: auto; left: auto; right: auto; bottom: auto;
+		margin: 0;
+	}
+    
+    img.full-width.max-height {
+        margin-top: -15%;
+    }*/
+
+    .urbangarden img.full-width.max-height {
+        margin-top: -15%;
+    }
+
+
+}
+
+/* MOBILE (Smaller than 768px)*/
+@media only screen and (max-width: 46.9999em) {
+
+    body {
+        font-size: 87.5%;
+        /* 14px */
+    }
+
+    h1 {
+        font-size: 1.7em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.25em;
+    }
+
+    h4 {
+        font-size: 1.15em;
+    }
+
+    h5 {
+        font-size: 1.05em;
+    }
+
+    h6 {
+        font-size: 1em;
+    }
+
+    .jumbo {
+        font-size: 1em;
+    }
+
+    blockquote {
+        font-size: 1.25em;
+    }
+
+    blockquote.quotes {
+        padding: 1.5em 2em 1em 2em;
+    }
+
+    blockquote.quotes:before {
+        font-size: 2.75em;
+        left: .1em;
+    }
+
+    blockquote.quotes:after {
+        font-size: 2.75em;
+        right: .1em;
+        bottom: .8em;
+    }
+
+    img {
+        margin: 0 0 $base-unit-px-sm 0;
+    }
+
+    .container,
+    .content .container {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .fcontent .container {
+        width: 80%;
+        margin: 0;
+        padding: 10%;
+    }
+
+    .content,
+    .paper {
+        padding: $base-unit-px-sm;
+    }
+
+    #top #utilitynav ul li#cghome a {
+        margin: 0;
+    }
+
+    #top #utilitynav ul li#cgmenu a {
+        display: block;
+    }
+
+    #top #utilitymenu ul {
+        display: none;
+    }
+
+    #top #utilitymenu ul.show {
+        display: block;
+    }
+
+    #top #utilitymenu ul.hide {
+        display: none;
+    }
+
+    #top #utilitymenu ul.right,
+    #top #utilitymenu ul li {
+        clear: both;
+        float: none;
+        text-align: right;
+    }
+
+    #top #utilitymenu ul.right li {
+        margin: 0;
+    }
+
+    #top #utilitymenu ul li:first-child {
+        padding-top: 1em;
+    }
+
+    #top #utilitymenu ul li:last-child {
+        padding-bottom: 1em;
+    }
+
+    #top #utilitymenu ul li a {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    /* HOME PAGE SPECIFIC */
+    .poster-cg {
+        background-image: url(none);
+        height: auto;
+        padding: 4em 0;
+        margin-bottom: 1%;
+    }
+
+    .poster-cg img {
+        width: 80px;
+        display: inline;
+        margin: 1.5em .8em .55em 0;
+        padding: 0;
+    }
+
+    .poster-cg h1,
+    .poster-cg p {
+        display: block;
+    }
+
+    .poster-cg h1 {
+        font-size: 1.2em;
+        margin-bottom: .55em;
+    }
+
+    .poster-cg h1+p {
+        font-size: .5em;
+    }
+
+    .thumbgrid {
+        margin: 1% 0 0 0;
+    }
+
+    .thumbgrid.solo {
+        margin: 0;
+    }
+
+    .thumbgrid.mid {
+        margin: 0 0 1% 0;
+    }
+
+    .thumbgrid .column {
+        margin-bottom: 1%;
+    }
+
+    .thumbgrid .last .column {
+        margin-bottom: 1%;
+    }
+
+    #about.paper {
+        margin-top: 1%;
+    }
+
+    .featuredbillboard {
+        margin: $base-unit-px-sm;
+    }
+
+    .featuredbillboard h1 {
+        font-size: 2em;
+    }
+
+    .full {
+        padding: $base-unit-px-sm;
+        //text-align: center;
+    }
+
+    .full .row {
+        margin: 0;
+    }
+
+    /*.full-width-wrapper {
+		position: relative;
+		min-height: inherit;
+		overflow: auto;
+        height: auto;
+	}
+    .full-width-wrapper .featuredbillboard {
+        margin: 0;
+    }
+	img.full-width.max-height {
+		position: static;
+		top: auto; left: auto; right: auto; bottom: auto;
+		margin: 0;
+	}
+    
+    
+    img.full-width.max-height {
+        margin-top: 0;
+    }*/
+
+    .urbangarden img.full-width.max-height {
+        margin-top: 0;
+    }
+
+}
+
+/* #@FONT-FACE
+===================================== */

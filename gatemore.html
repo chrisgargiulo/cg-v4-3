@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chris Gargiulo - Gatemore</title>
+
+<!-- HTML5 -->
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- VIEWPORT FOR MOBILE -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- MAIN CSS -->
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+<header> 
+    <div class="container">
+        <h1>Chris Gargiulo</h1>   
+        <p>Designer &amp; Teacher</p>  
+	</div><!-- END CONTAINER -->
+</header>
+
+<div id="top">
+    <nav id="utilitynav" class="group">
+        <div class="container">
+            <ul class="nav">
+                <li id="cghome"><a href="index.html">Chris Gargiulo</a></li>
+                <li id="cgmenu"><a class="border-menu" href="#top"><span>Menu</span></a></li>
+            </ul>
+        </div><!-- END CONTAINER -->
+    </nav>
+    <nav id="utilitymenu" class="group">
+        <div class="container">
+            <ul class="nav right">
+                <li><a href="work.html"><!--<i class="icon-briefcase"></i> -->Work</a></li>
+                <!--<li><a href="#teaching">Teaching</a></li>-->
+                <li><a href="about.html"><!--<i class="icon-user"></i> -->About</a></li>
+            </ul>
+        </div><!-- END CONTAINER -->
+    </nav>
+</div>
+
+<section class="full white">
+    <div class="container">
+    
+    	<div class="row">
+            <div class="one-whole column">
+                <div class="featuredbillboard textonly gatemore">
+                    <div class="featuredtextbox"><div class="text">
+                        <h1><em>Gatemore</em> Capital Management</h1>
+                        <h2>Identity Design</h2>
+                    </div></div><!-- END TEXT and TEXTBOX -->
+				  <img src="images/gatemore-poster3.gif" alt="Gatemore" class="scale-with-grid last" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+    
+<section class="full grey-ten"> 
+    <div class="container">
+    
+    	<div class="row">
+            <div class="one-whole column">             
+                <img src="images/gatemore2-g10.gif" alt="Gatemore" class="scale-with-grid" />
+            </div>
+        </div>
+          
+    </div>
+</section>
+    
+<section class="full grey-fifteen"> 
+    <div class="container">
+    
+    	<div class="row">
+            <div class="one-whole column">             
+                <img src="images/gatemore3b-g15.gif" alt="Gatemore" class="scale-with-grid" />
+            </div>
+        </div>
+          
+    </div>
+</section>
+    
+<section class="full grey-ten"> 
+    <div class="container">
+    
+    	<div class="row">
+            <div class="one-whole column">             
+                <img src="images/gatemore4-g10.gif" alt="Gatemore" class="scale-with-grid" />
+            </div>
+        </div>
+          
+    </div>
+</section>
+    
+<section class="full grey-fifteen"> 
+    <div class="container">
+    
+    	<div class="row">
+            <div class="one-whole column">             
+                <img src="images/gatemore5-g15.gif" alt="Gatemore" class="scale-with-grid" />
+            </div>
+        </div>
+          
+    </div>
+</section>
+    
+<section class="full white"> 
+    <div class="container">
+    
+    	<div class="row">
+            <div class="one-whole column">             
+                <img src="images/gatemore-mockup.jpg" alt="Gatemore" class="scale-with-grid last" />
+            </div>
+        </div>
+          
+    </div>
+</section>
+
+<div class="content group">
+<div class="container">
+             
+    <div class="thumbgrid solo"> 
+
+    </div><!--  END THUMBGRID -->
+   
+
+</div><!-- END CONTAINER -->
+</div><!-- END CONTENT -->
+    
+<div id="bottom">    
+    <nav id="footernav">
+        <div class="container">
+            <ul class="nav icons">
+                <li><a href="index.html"><!--<i class="icon-home"></i> -->Home</a></li>
+                <li><a href="work.html"><!--<i class="icon-briefcase"></i> -->Work</a></li>
+                <li><a href="about.html"><!--<i class="icon-user"></i> -->About</a></li>
+            </ul>
+        </div><!-- END CONTAINER -->
+    </nav> 
+</div>
+<footer>
+    <div class="container">
+            <div class="row">
+                <div class="one-whole column">
+                    <p class="copyright">&copy; <a href="index.html">Chris Gargiulo</a></p>
+                </div><!-- END COLUMN -->
+            </div><!-- END ROW GROUP -->
+    </div><!-- END CONTAINER -->
+</footer>
+    
+<!-- JS -->
+<script type="text/javascript" src="js/jquery.js"></script>		
+<script type="text/javascript" src="js/jquery.easing.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		// JQUERY ANIMATE TO ANCHOR WITH EASING
+		$('ul.nav a, a.bnav').bind('click',function(event){
+			var $anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top -36
+			}, 1500,'easeInOutExpo');
+			event.preventDefault();
+		});
+        
+        // JQUERY NAV TOGGLE 
+		$('#cgmenu a').click(function(){
+			$('#utilitymenu ul').slideToggle(function(){
+				if ($(this).css('display') == 'none') {
+					$(this).removeClass('show').addClass('hide').removeAttr('style')
+				} else if ($(this).css('display') == 'block') {
+					$(this).removeClass('hide').addClass('show').removeAttr('style');
+				}
+			});
+		})
+        
+        // LOAD WORK THUMBGRID CONTENT
+        $('.thumbgrid').load('index.html #work');
+		
+	});
+</script>
+
+</body>
+</html>
